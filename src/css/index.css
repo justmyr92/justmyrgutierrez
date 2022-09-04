@@ -12,8 +12,13 @@
 }
 
 @font-face {
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     src: url("../fonts/Barlow-Black.ttf");
+}
+
+@font-face {
+    font-family: "Barlow Bold";
+    src: url("../fonts/Barlow-Bold.ttf");
 }
 
 @font-face {
@@ -50,10 +55,10 @@ html {
 }
 
 .navbar-brand {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     line-height: inherit;
     text-decoration: none;
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     color: #212529;
 }
 
@@ -139,8 +144,8 @@ html {
 
 section.main {
     height: 100vh;
-    background: linear-gradient(310deg, #c2c2c2, #d3d3d3, #eeeeee, #f8f9fa);
-    background-size: 400% 400%;
+    background: linear-gradient(310deg, #bbbbbb, #c2c2c2, #d3d3d3, #eeeeee, #f8f9fa);
+    background-size: 300% 300%;
     animation: AnimationName 16s ease infinite;
 }
 
@@ -173,14 +178,13 @@ section.main div.container div.content-group {
 section.main div.container div.content-group h3 {
     font-family: "Barlow Bold";
     text-transform: uppercase;
-    font-size: 2.3em;
-    color: #554994;
+    font-size: 2.2em;
 }
 
 section.main div.container div.content-group h1 {
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 15px;
 }
 
@@ -250,7 +254,68 @@ section.main div.container div.content-group p {
 }
 
 .about-me,
-.skills,
-.contact-me {
+.skills {
     height: 100vh;
+    border: 1px solid black;
+}
+
+.contact-me {
+    border: 1px solid black;
+    height: 200vh;
+}
+
+footer.footer {
+    padding: 1.2rem 0;
+    background-color: #212529;
+}
+
+footer.footer .container {
+    width: 86%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content a,
+.footer a span {
+    color: #fff;
+    font-family: "Barlow Regular";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    text-decoration: none;
+    padding: 20px 0;
+}
+
+.footer a span {
+    font-family: "Barlow Bold";
+}
+
+.footer-content .social-media {
+    margin: auto 0;
+}
+
+.footer-content .social-media a img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.footer hr {
+    color: #f8f9fa;
+}
+
+.footer-content .social-media a {
+    padding: 0 10px!important;
+}
+
+.footer p {
+    color: #FFFFFF;
+    font: 1.4rem;
+    font-family: "Barlow Regular";
+    padding: 20px 0;
 }
