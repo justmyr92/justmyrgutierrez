@@ -24,16 +24,16 @@ $(document).ready(function() {
     console.log(navlink.length);
     $(document).scroll(function() {
         for (let i = 0; i < navlink.length; i++) {
-            if (window.pageYOffset <= main_section) {
+            if (window.pageYOffset < main_section) {
                 navlink[i].classList.remove('active');
                 navlink[0].classList.add('active');
-            } else if (window.pageYOffset <= main_section + about_section) {
+            } else if (window.pageYOffset < main_section + about_section) {
                 navlink[i].classList.remove('active');
                 navlink[1].classList.add('active');
-            } else if (window.pageYOffset <= skill_section + about_section + main_section) {
+            } else if (window.pageYOffset < skill_section + about_section + main_section) {
                 navlink[i].classList.remove('active');
                 navlink[2].classList.add('active');
-            } else if (window.pageYOffset <= contact_me_section + skill_section + about_section + main_section) {
+            } else if (window.pageYOffset < contact_me_section + skill_section + about_section + main_section) {
 
                 navlink[i].classList.remove('active');
                 navlink[3].classList.add('active');
