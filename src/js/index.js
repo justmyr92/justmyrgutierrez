@@ -52,3 +52,15 @@ $(document).ready(function() {
         }
     });
 });
+
+
+$(document).ready(function() {
+    var input = $('input');
+    var textarea = $('textarea');
+    $('.reset').click(function() {
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = "";
+        }
+        textarea[i].value = "";
+    });
+});

@@ -340,45 +340,51 @@ html {
 }
 
 .contact-me {
+    padding: 30px 0px;
     background-color: #eeeeee;
-    height: 80vh;
 }
 
 .contact-me .container {
     width: 86%;
-    height: 100%;
     margin: 0 auto;
+}
+
+.contact-me .container h1 {
+    font-size: 2rem;
+    font-family: "Barlow Bold";
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .contact-me .container .flex-content {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    height: 100%;
 }
 
 .contact-me .form-container,
 .contact-me .contact-details {
     width: 50%;
     padding: 30px;
-    height: 100%;
 }
 
-.contact-me .form-container {
-    position: relative;
+.contact-me .form-container h3 {
+    font-family: "Barlow Bold";
+    margin-bottom: 15px;
 }
 
 .form-container form {
     background-color: #FFFFFF;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 1px solid #eeeeee;
+    box-shadow: .2rem .2rem #5549945d;
     width: 70%;
+    margin: 0 auto;
     padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: fit-content;
+    transition: box-shadow .5s;
+}
+
+.form-container form:hover {
+    box-shadow: .5rem .5rem #554994;
 }
 
 input,
@@ -390,6 +396,7 @@ textarea {
     width: 100%;
     height: max-content;
     margin-bottom: 10px;
+    border: 2px solid black;
 }
 
 textarea {
