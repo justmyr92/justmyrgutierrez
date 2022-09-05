@@ -17,6 +17,7 @@ var toggler = document.getElementsByClassName('navbar-toggler');
 $(document).ready(function() {
     var main_section = document.querySelector('.main').clientHeight;
     var about_section = document.querySelector('.about-me').clientHeight;
+    var education_section = document.querySelector('.education').clientHeight;
     var skill_section = document.querySelector('.skills').clientHeight;
     var contact_me_section = document.querySelector('.contact-me').clientHeight;
     console.log(contact_me_section)
@@ -33,10 +34,13 @@ $(document).ready(function() {
             } else if (window.pageYOffset < skill_section + about_section + main_section) {
                 navlink[i].classList.remove('active');
                 navlink[2].classList.add('active');
-            } else if (window.pageYOffset < contact_me_section + skill_section + about_section + main_section) {
-
+            } else if (window.pageYOffset < education_section + skill_section + about_section + main_section) {
                 navlink[i].classList.remove('active');
                 navlink[3].classList.add('active');
+            } else if (window.pageYOffset < contact_me_section + education_section + skill_section + about_section + main_section) {
+
+                navlink[i].classList.remove('active');
+                navlink[4].classList.add('active');
             }
         }
     });

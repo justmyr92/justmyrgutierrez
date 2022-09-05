@@ -212,10 +212,7 @@ html {
     right: 2%;
     bottom: 2%;
     position: fixed;
-}
-
-.box a {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 .about-me {
@@ -231,7 +228,7 @@ html {
 
 .about-me .container h1 {
     font-size: 2rem;
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
@@ -239,7 +236,6 @@ html {
 
 .about-me .container .flex-content {
     display: flex;
-    justify-content: center;
 }
 
 .about-me .container .flex-content .img-container {
@@ -259,7 +255,6 @@ html {
 
 .about-me .container .flex-content .about-me-content {
     padding: 15px 20px;
-    width: 50%;
 }
 
 .about-me .container .flex-content .about-me-content h3 {
@@ -280,6 +275,63 @@ html {
     margin: 8px 0;
 }
 
+section.education {
+    padding: 30px 0px;
+    background-color: #FFFFFF;
+}
+
+section.education .container {
+    width: 86%;
+    margin: 0 auto;
+}
+
+section.education .container h1 {
+    font-size: 2rem;
+    font-family: "Barlow Black";
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section.education .flex-content {
+    width: 100%;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.education .card {
+    border: 1px solid #2125291f;
+    background-color: #f8f9fa;
+    width: 17rem;
+    padding: 15px;
+    border-radius: 2px;
+    transition: background .3s;
+}
+
+section.education .card:hover {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    background-color: #FFFFFF;
+}
+
+section.education .card-body h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 5px 0px;
+    font-family: "Barlow Black";
+}
+
+section.education .card-body h3 {
+    margin-bottom: 5px;
+    font-family: "Barlow Bold";
+}
+
+section.education .card-body p {
+    margin-bottom: 5px;
+    font-family: "Barlow Regular";
+}
+
 .skills {
     padding: 30px 0px;
     background-color: #554994;
@@ -294,7 +346,7 @@ html {
 
 .skills .container h1 {
     font-size: 2rem;
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
@@ -351,7 +403,7 @@ html {
 
 .contact-me .container h1 {
     font-size: 2rem;
-    font-family: "Barlow Bold";
+    font-family: "Barlow Black";
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
