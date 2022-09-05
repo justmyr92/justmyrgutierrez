@@ -26,19 +26,19 @@ $(document).ready(function() {
     console.log(navlink.length);
     $(document).scroll(function() {
         for (let i = 0; i < navlink.length; i++) {
-            if (window.pageYOffset < main_section - 400) {
+            if (window.pageYOffset < main_section - 300) {
                 navlink[i].classList.remove('active');
                 navlink[0].classList.add('active');
-            } else if (window.pageYOffset < about_section + main_section - 400) {
+            } else if (window.pageYOffset < about_section + main_section - 300) {
                 navlink[i].classList.remove('active');
                 navlink[1].classList.add('active');
-            } else if (window.pageYOffset < skill_section + about_section + main_section - 400) {
+            } else if (window.pageYOffset < skill_section + about_section + main_section - 300) {
                 navlink[i].classList.remove('active');
                 navlink[2].classList.add('active');
-            } else if (window.pageYOffset < education_section + skill_section + about_section + main_section - 400) {
+            } else if (window.pageYOffset < education_section + skill_section + about_section + main_section - 300) {
                 navlink[i].classList.remove('active');
                 navlink[3].classList.add('active');
-            } else if (window.pageYOffset < contact_me_section + education_section + skill_section + about_section + main_section - 400) {
+            } else if (window.pageYOffset < contact_me_section + education_section + skill_section + about_section + main_section - 300) {
 
                 navlink[i].classList.remove('active');
                 navlink[4].classList.add('active');
