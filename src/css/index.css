@@ -217,7 +217,7 @@ html {
 
 .about-me {
     padding: 30px 0px;
-    background-color: #eeeeee;
+    background-color: #FFFFFF;
 }
 
 .about-me .container {
@@ -277,7 +277,7 @@ html {
 
 section.education {
     padding: 30px 0px;
-    background-color: #FFFFFF;
+    background-color: #f8f9fa;
 }
 
 section.education .container {
@@ -302,7 +302,7 @@ section.education .flex-content {
 
 section.education .card {
     border: 1px solid #2125291f;
-    background-color: #f8f9fa;
+    background-color: #FFFFFF;
     width: 17rem;
     padding: 15px;
     border-radius: 2px;
@@ -311,12 +311,12 @@ section.education .card {
 
 section.education .card:hover {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-    background-color: #FFFFFF;
+    background-color: #f8f9fa;
 }
 
 section.education .card-body h2 {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
     margin: 5px 0px;
     font-family: "Barlow Black";
@@ -324,6 +324,7 @@ section.education .card-body h2 {
 
 section.education .card-body h3 {
     margin-bottom: 5px;
+    font-size: 1rem;
     font-family: "Barlow Bold";
 }
 
