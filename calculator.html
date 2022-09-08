@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        section.main {
+            height: 100vh;
+            position: relative;
+            background-color: #757575;
+        }
+        
+        div.container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #f8f9fa;
+            background-color: #ffffff;
+            box-shadow: 1rem 1rem #554994;
+            padding: 10px;
+        }
+        
+        div.header {
+            padding: 10px;
+        }
+        
+        input[type="text"] {
+            font-size: 20px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: #eeeeee;
+            text-align: end;
+            border: 1px solid black;
+        }
+        
+        div.answer-box {
+            display: flex;
+            padding: 2px;
+            justify-content: end;
+            height: 40px;
+        }
+        
+        .answer {
+            line-height: 40px;
+            font-size: 40px;
+        }
+        
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .row button {
+            height: 72px;
+            width: 72px;
+            margin: 5px 5px 5px 5px;
+            font-size: 30px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.75);
+            background-color: #f8f9fa;
+            border-radius: 50%;
+        }
+        
+        .row .op {
+            color: blue;
+        }
+        
+        .row .equal {
+            color: red;
+        }
+        
+        .row .clear,
+        .row .delete {
+            color: yellow;
+        }
+        
+        .row button:hover,
+        .row .active {
+            background-color: #dddddd;
+        }
+    </style>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="header">
+                <input type="text" name="input" id="input" />
+                <br />
+                <div class="answer-box">
+                    <h1 class="answer"></h1>
+                </div>
+
+                <hr style="color: black" />
+            </div>
+            <div class="row">
+                <button type="button" class="btn op">%</button>
+                <button type="button" class="btn clear">C</button>
+                <button type="button" class="btn delete">D</button>
+                <button type="button" class="btn op">/</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn num">7</button>
+                <button type="button" class="btn num">8</button>
+                <button type="button" class="btn num">9</button>
+                <button type="button" class="btn op">*</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn num">4</button>
+                <button type="button" class="btn num">5</button>
+                <button type="button" class="btn num">6</button>
+                <button type="button" class="btn op">-</button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn num">1</button>
+                <button type="button" class="btn num">2</button>
+                <button type="button" class="btn num">3</button>
+                <button type="button" class="btn op">+</button>
+            </div>
+
+            <div class="row">
+                <button type="button" class="btn op">+/-</button>
+                <button type="button" class="btn num">0</button>
+                <button type="button" class="btn num">.</button>
+                <button type="button" class="btn equal">=</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        var numKey = document.querySelectorAll(".num");
+        var opKey = document.querySelectorAll(".op");
+        var deleteKey = document.querySelector(".delete");
+        var input = document.getElementById("input");
+        var clearKey = document.querySelector(".clear");
+        var equalKey = document.querySelector(".equal");
+        var answer = document.querySelector(".answer");
+        var keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+        for (let i = 0; i < numKey.length; i++) {
+            numKey[i].addEventListener("click", function() {
+                console.log(numKey[i]);
+                input.value += numKey[i].innerHTML;
+            });
+        }
+        for (let i = 0; i < opKey.length; i++) {
+            opKey[i].addEventListener("click", function() {
+                input.value += opKey[i].innerHTML;
+            });
+        }
+        deleteKey.addEventListener("click", function() {
+            input.value = input.value.slice(0, -1);
+            console.log(input.value.slice(0, -1));
+        });
+        clearKey.addEventListener("click", function() {
+            input.value = "";
+        });
+        equalKey.addEventListener("click", function() {
+            answer.innerHTML = eval(input.value);
+        });
+        window.addEventListener("keypress", (e) => {
+            var code = e.key;
+            for (let i = 0; i < keys.length; i++) {
+                if (code.toString() === keys[i].toString()) {
+                    input.value += code.toString();
+                    for (let j = 0; j < numKey.length; j++) {
+                        console.log(numKey[j].innerHTML, code.toString());
+                        if (numKey[j].innerHTML == code.toString()) {
+                            numKey[j].classList.add("active");
+                        }
+                    }
+                    break;
+                }
+            }
+        });
+        window.addEventListener("keyup", (e) => {
+            for (let j = 0; j < numKey.length; j++) {
+                numKey[j].classList.remove("active");
+            }
+        });
+    </script>
+</body>
+
+</html>
