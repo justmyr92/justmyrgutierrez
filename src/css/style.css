@@ -48,7 +48,6 @@ html {
     text-decoration: none;
     font-family: "Barlow Black";
     color: #212529;
-    border: 1px solid black;
 }
 
 .navbar-brand span {
@@ -61,7 +60,6 @@ html {
     height: 2.5rem;
     vertical-align: middle;
     display: inline-block;
-    border: 1px solid black;
 }
 
 .nav-collapse {
