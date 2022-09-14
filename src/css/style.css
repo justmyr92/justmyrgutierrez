@@ -98,7 +98,13 @@ html {
     background-size: 600% 600%;
     animation: bgAnimate 10s ease infinite;
 }
-
+.bg-image {
+    position: absolute;
+    right: 12%;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+}
 @keyframes bgAnimate {
     0% {
         background-position: 0% 91%
