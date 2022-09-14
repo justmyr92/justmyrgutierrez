@@ -329,7 +329,7 @@ section.education .card-body p {
 }
 
 .skills .container {
-    width: 86%;
+    width: 80%;
     height: fit-content;
     margin: 0 auto;
 }
@@ -381,13 +381,103 @@ section.education .card-body p {
     text-align: center;
 }
 
+.contact {
+    padding: 30px 0px;
+}
+
+.contact .container {
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.contact .container h1 {
+    font-size: 2rem;
+    font-family: "Barlow Black";
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact .container .flex-content {
+    width: 100%;
+    display: flex;
+}
+
+.contact-form-container,
+.info-container {
+    width: 50%;
+    padding: 30px 20px;
+}
+
+form.contact-form {
+    width: fit-content;
+    padding: 20px 30px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #554994;
+    box-shadow: 0.5rem 0.5rem #554994;
+}
+
+form.contact-form h2 {
+    font-family: "Barlow Black";
+    margin-bottom: 10px;
+    color: #554994;
+}
+
+form.contact-form .name,
+form.contact-form .email,
+form.contact-form .phonenumber,
+form.contact-form .message {
+    margin-bottom: 10px;
+}
+
+form.contact-form .input {
+    font-family: "Barlow Regular";
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    margin-top: 2px;
+}
+
+form.contact-form textarea.input {
+    resize: none;
+}
+
+form.contact-form .input:focus,
+form.contact-form .input:hover {
+    outline: none;
+}
+
+.info-container h2 {
+    font-family: "Barlow Black";
+    margin-bottom: 10px;
+    color: #554994;
+    text-transform: uppercase;
+}
+
+.contact hr {
+    margin: 10px 0px;
+}
+
+table tr td {
+    padding-bottom: 5px;
+}
+
+form.contact-form label {
+    font-family: "Barlow Regular";
+}
+
 footer.footer {
     padding: 1.2rem 0;
     background-color: #212529;
 }
 
 footer.footer .container {
-    width: 86%;
+    width: 80%;
     height: fit-content;
     margin: 0 auto;
 }
