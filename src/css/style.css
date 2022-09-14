@@ -97,6 +97,7 @@ html {
     background: linear-gradient(310deg, #bbbbbb, #c2c2c2, #d3d3d3, #eeeeee, #f8f9fa, #f8f9fa);
     background-size: 600% 600%;
     animation: bgAnimate 10s ease infinite;
+    position:relative;
 }
 .bg-image {
     position: absolute;
